@@ -1,0 +1,7 @@
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\IsmaelBendaoudAssignment\bin\Debug\IsmaelBendaoudAssignment.exe.config
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\IsmaelBendaoudAssignment\bin\Debug\IsmaelBendaoudAssignment.exe
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\IsmaelBendaoudAssignment\bin\Debug\IsmaelBendaoudAssignment.pdb
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\IsmaelBendaoudAssignment\obj\Debug\IsmaelBendaoudAssignment.csprojAssemblyReference.cache
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\IsmaelBendaoudAssignment\obj\Debug\IsmaelBendaoudAssignment.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\IsmaelBendaoudAssignment\obj\Debug\IsmaelBendaoudAssignment.exe
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\IsmaelBendaoudAssignment\obj\Debug\IsmaelBendaoudAssignment.pdb
