@@ -17,5 +17,8 @@ namespace Domain
         public int GroupID { get; set; }
         public string name { get; set; }
         public string Course { get; set; }
+    
+        public virtual Lesson Lesson { get; set; }
+        public virtual Student Student { get; set; }
     }
 }

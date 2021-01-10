@@ -18,5 +18,9 @@ namespace Domain
         public int GroupID { get; set; }
         public Nullable<System.DateTime> Datetime { get; set; }
         public int TeacherID { get; set; }
+    
+        public virtual Group Group { get; set; }
+        public virtual Teacher Teacher { get; set; }
+        public virtual StudentAttendance StudentAttendance { get; set; }
     }
 }

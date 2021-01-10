@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class TypeEdit
+    class TypeEdit
     {
+    }
+    public partial class Teacher
+    {
+        public Teacher(int teacherID, string username, string password, string name, string surname, string email)
+        {
+            teacherID = teacherID;
+            username = username;
+            password = password;
+            name = name;
+            surname = surname;
+            email = email;
+        }
     }
 }

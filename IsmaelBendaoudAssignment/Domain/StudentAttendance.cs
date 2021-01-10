@@ -18,5 +18,8 @@ namespace Domain
         public int LessonID { get; set; }
         public Nullable<bool> Presence { get; set; }
         public int StudentID { get; set; }
+    
+        public virtual Lesson Lesson { get; set; }
+        public virtual Student Student { get; set; }
     }
 }
