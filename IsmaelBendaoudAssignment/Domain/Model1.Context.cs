@@ -16,7 +16,7 @@ namespace Domain
     public partial class AttendanceSystemEntities : DbContext
     {
         public AttendanceSystemEntities()
-            : base("name=AttendanceSystemEntities")
+            : base("AttendanceSystemEntities")
         {
         }
     

@@ -1,0 +1,15 @@
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\Business.dll
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\Business.pdb
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\Data.dll
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\Domain.dll
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\EntityFramework.dll
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\Data.pdb
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\Data.dll.config
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\Domain.pdb
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\Domain.dll.config
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\EntityFramework.xml
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\obj\Debug\Business.csprojAssemblyReference.cache
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\obj\Debug\Business.csproj.CopyComplete
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\obj\Debug\Business.dll
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\obj\Debug\Business.pdb
