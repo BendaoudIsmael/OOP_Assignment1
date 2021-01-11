@@ -4,17 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4497106c1f3040b4b652a02597e6f956" Name="Diagram1" ZoomLevel="86">
-        <EntityTypeShape EntityType="AttendanceSystemModel.Group" Width="1.5" PointX="0.75" PointY="2.875" />
-        <EntityTypeShape EntityType="AttendanceSystemModel.Lesson" Width="1.5" PointX="6" PointY="2.625" />
-        <EntityTypeShape EntityType="AttendanceSystemModel.Student" Width="1.5" PointX="3" PointY="2.625" />
-        <EntityTypeShape EntityType="AttendanceSystemModel.StudentAttendance" Width="1.5" PointX="8.25" PointY="2.75" />
-        <EntityTypeShape EntityType="AttendanceSystemModel.Teacher" Width="1.5" PointX="4.625" PointY="5.75" />
-        <AssociationConnector Association="AttendanceSystemModel.FK_Lesson_Group" />
-        <AssociationConnector Association="AttendanceSystemModel.FK_Student_Group" />
-        <AssociationConnector Association="AttendanceSystemModel.FK_Lesson_Teacher" />
-        <AssociationConnector Association="AttendanceSystemModel.FK_StudentAttendance_Lesson" />
-        <AssociationConnector Association="AttendanceSystemModel.FK_StudentAttendance_Student" />
+      <Diagram DiagramId="4728ffaa34214884b50e3db8c198c6d0" Name="Diagram1">
+        <EntityTypeShape EntityType="AttendanceSystemModel.Group" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceSystemModel.Lesson" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceSystemModel.Student" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceSystemModel.StudentAttendance" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AttendanceSystemModel.Teacher" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="AttendanceSystemModel.FK_Lesson_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceSystemModel.FK_Student_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceSystemModel.FK_Lesson_Teacher" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceSystemModel.FK_StudentAttendance_Lesson" ManuallyRouted="false" />
+        <AssociationConnector Association="AttendanceSystemModel.FK_StudentAttendance_Student" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

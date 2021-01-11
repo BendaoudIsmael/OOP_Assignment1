@@ -13,11 +13,10 @@ namespace Data
 
         public void AddInitialData() //to be called once only
         {
-            Teacher teach1 = new Teacher(233999, "Ismael Bendaoud");
-            Teacher teach2 = new Teacher(43389, "Deandra Xuereb");
+            Teacher teach1 = new Teacher(0293600, "Ismael Bendaoud");
 
-            db.Teachers.Add(teach1); db.Teachers.Add(teach2);
-
-        }
+            db.Teachers.Add(teach1);
+            db.SaveChanges();
+        }    
     }
 }
