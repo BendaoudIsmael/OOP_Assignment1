@@ -23,6 +23,11 @@ namespace IsmaelBendaoudAssignment
         {
             bl.AddInitialData();
 
+            Console.WriteLine("Main Menu");
+            Console.WriteLine("=========");
+
+            Console.WriteLine("1. Login");
+            Console.WriteLine("2. Exit");
 
             Console.ReadKey();
         }

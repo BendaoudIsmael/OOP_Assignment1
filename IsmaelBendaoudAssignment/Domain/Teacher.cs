@@ -14,6 +14,12 @@ namespace Domain
     
     public partial class Teacher
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Teacher()
+        {
+            this.Lessons = new HashSet<Lesson>();
+        }
+    
         public int TeacherID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
@@ -21,6 +27,7 @@ namespace Domain
         public string Surname { get; set; }
         public string Email { get; set; }
     
-        public virtual Lesson Lesson { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Lesson> Lessons { get; set; }
     }
 }

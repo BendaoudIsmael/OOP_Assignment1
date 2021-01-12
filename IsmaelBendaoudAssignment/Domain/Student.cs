@@ -14,6 +14,12 @@ namespace Domain
     
     public partial class Student
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Student()
+        {
+            this.StudentAttendances = new HashSet<StudentAttendance>();
+        }
+    
         public int StudentID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -21,6 +27,7 @@ namespace Domain
         public int GroupID { get; set; }
     
         public virtual Group Group { get; set; }
-        public virtual StudentAttendance StudentAttendance { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StudentAttendance> StudentAttendances { get; set; }
     }
 }

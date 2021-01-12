@@ -11,18 +11,15 @@ namespace Domain
     }
     public partial class Teacher
     {
-        public Teacher(int v1, string v2)
-        {
-        }
-
+     
         public Teacher(int teacherID, string username, string password, string name, string surname, string email)
         {
-            teacherID = teacherID;
-            username = username;
-            password = password;
-            name = name;
-            surname = surname;
-            email = email;
+            TeacherID = teacherID;
+            Username = username;
+            Password = password;
+            Name = name;
+            Surname = surname;
+            Email = email;
         }
     }
 
@@ -30,44 +27,43 @@ namespace Domain
     {
         public StudentAttendance(int attendanceID, int lessonID, bool presence, int studentID)
         {
-            attendanceID = attendanceID;
-            lessonID = lessonID;
-            presence = presence;
-            
-            studentID = studentID;
+            AttendanceID = attendanceID;
+            LessonID = lessonID;
+            Presence = presence;
+            StudentID = studentID;
         }
     }
 
     public partial class Student
     {
-        public Student(int StudentID, string name, string surname, string email, int groupID)
+        public Student(int studentID, string name, string surname, string email, int groupID)
         {
-            StudentID = StudentID;
-            name = name;
-            surname = surname;
-            email = email;
-            groupID = groupID;
+            StudentID = studentID;
+            Name = name;
+            Surname = surname;
+            Email = email;
+            GroupID = groupID;
         }
     }
 
     public partial class Lesson
     {
-        public Lesson(int LessonID, int groupID, DateTime dateTime, int teacherID)
+        public Lesson(int lessonID, int groupID, DateTime dateTime, int teacherID)
         {
-            LessonID = LessonID;
-            groupID = groupID;
-            dateTime = dateTime;
-            teacherID = teacherID;
+            LessonID = lessonID;
+            GroupID = groupID;
+            Datetime = dateTime;
+            TeacherID = teacherID;
         }
     }
 
     public partial class Group
     {
-        public Group(int groupID, string name, string course)
+        public Group(int groupID, string Groupn, string course)
         {
-            groupID = groupID;
-            name = name;
-            course = course;
+            GroupID = groupID;
+            name = Groupn;
+            Course = course;
         }
     }
 }

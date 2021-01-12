@@ -49,61 +49,61 @@
   </EntityType>
   <Association Name="FK_Lesson_Group">
     <End Role="Group" Type="Self.Group" Multiplicity="1" />
-    <End Role="Lesson" Type="Self.Lesson" Multiplicity="0..1" />
+    <End Role="Lesson" Type="Self.Lesson" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Group">
         <PropertyRef Name="GroupID" />
       </Principal>
       <Dependent Role="Lesson">
-        <PropertyRef Name="LessonID" />
+        <PropertyRef Name="GroupID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Lesson_Teacher">
     <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
-    <End Role="Lesson" Type="Self.Lesson" Multiplicity="0..1" />
+    <End Role="Lesson" Type="Self.Lesson" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Teacher">
         <PropertyRef Name="TeacherID" />
       </Principal>
       <Dependent Role="Lesson">
-        <PropertyRef Name="LessonID" />
+        <PropertyRef Name="TeacherID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Student_Group">
     <End Role="Group" Type="Self.Group" Multiplicity="1" />
-    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Group">
         <PropertyRef Name="GroupID" />
       </Principal>
       <Dependent Role="Student">
-        <PropertyRef Name="StudentID" />
+        <PropertyRef Name="GroupID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_StudentAttendance_Lesson">
     <End Role="Lesson" Type="Self.Lesson" Multiplicity="1" />
-    <End Role="StudentAttendance" Type="Self.StudentAttendance" Multiplicity="0..1" />
+    <End Role="StudentAttendance" Type="Self.StudentAttendance" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Lesson">
         <PropertyRef Name="LessonID" />
       </Principal>
       <Dependent Role="StudentAttendance">
-        <PropertyRef Name="AttendanceID" />
+        <PropertyRef Name="LessonID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_StudentAttendance_Student">
     <End Role="Student" Type="Self.Student" Multiplicity="1" />
-    <End Role="StudentAttendance" Type="Self.StudentAttendance" Multiplicity="0..1" />
+    <End Role="StudentAttendance" Type="Self.StudentAttendance" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Student">
         <PropertyRef Name="StudentID" />
       </Principal>
       <Dependent Role="StudentAttendance">
-        <PropertyRef Name="AttendanceID" />
+        <PropertyRef Name="StudentID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
