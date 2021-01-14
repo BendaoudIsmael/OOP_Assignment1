@@ -21,20 +21,51 @@ namespace IsmaelBendaoudAssignment
         static BL bl = new BL();
         static void Main(string[] args)
         {
-            bl.AddInitialData();
+            // bl.AddInitialData();
 
-
-
-
-            static string ShowMainMenu()
+            bool showMenu = true;
+            while (showMenu)
             {
+                showMenu = MainMenu();
+            }
+        }
+
+        private static bool MainMenu()
+            {
+                Console.Clear();
                 Console.WriteLine("Main Menu");
                 Console.WriteLine("=========");
                 Console.WriteLine("1. Login");
                 Console.WriteLine("2. Exit");
-                Console.WriteLine("Enter Choice");
-                string choice = Console.ReadLine();
-                return choice;
+                Console.WriteLine("Enter Choice: ");
+
+                switch (Console.ReadLine())
+            {
+                 case "1":
+                    LoginMenu();
+                    return true;
+
+                case "2":
+                  //  ExitMessage();
+                    return false;
+
+                default:
+                    return true;
+
+            }
+        }
+
+        private static bool LoginMenu()
+        {
+            Console.WriteLine("Login");
+            Console.WriteLine("=======");
+            Console.ReadLine();
+            Console.WriteLine("Username : ");
+
+            switch (Console.ReadLine())
+            {
+                default:
+                    return true;
             }
         }
     }

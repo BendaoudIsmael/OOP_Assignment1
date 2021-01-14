@@ -19,6 +19,8 @@ namespace Business
         public void AddInitialData()
         {
             dl.AddInitialData();
+
+
         }
     }
 }

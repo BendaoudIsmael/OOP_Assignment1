@@ -55,8 +55,7 @@ namespace Data
 
             db.StudentAttendances.Add(sa1);
             db.SaveChanges();        
-            */
-            
+            */            
 
         }    
 

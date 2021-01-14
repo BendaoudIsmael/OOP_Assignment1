@@ -16,7 +16,7 @@
     </Key>
     <Property Name="LessonID" Type="Int32" Nullable="false" />
     <Property Name="GroupID" Type="Int32" Nullable="false" />
-    <Property Name="Datetime" Type="DateTime" Precision="3" />
+    <Property Name="Datetime" Type="DateTime" />
     <Property Name="TeacherID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Group" Relationship="Self.FK_Lesson_Group" FromRole="Lesson" ToRole="Group" />
     <NavigationProperty Name="Teacher" Relationship="Self.FK_Lesson_Teacher" FromRole="Lesson" ToRole="Teacher" />
