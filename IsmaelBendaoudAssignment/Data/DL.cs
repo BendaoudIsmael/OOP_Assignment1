@@ -56,8 +56,56 @@ namespace Data
             db.StudentAttendances.Add(sa1);
             db.SaveChanges();        
             */            
+        }
+        
+        public Teacher TeacherIDs(int teacherID)
+        {
+            var teacherIDs = (from Teacher in db.Teachers where Teacher.TeacherID == teacherID select Teacher);
+            return teacherIDs.SingleOrDefault();
+        }
 
-        }    
+        public Group GroupIDs(int groupID)
+        {
+            var groupIDs = (from Group in db.Groups where Group.GroupID == groupID select Group);
+            return groupIDs.SingleOrDefault();
+        }
 
+        public Student StudentIDs(int studentID)
+        {
+            var studentIDs = (from Student in db.Students where Student.StudentID == studentID select Student);
+            return studentIDs.SingleOrDefault();
+        }
+
+        public Student StudentGroupIDs(int groupID)
+        {
+            var StudentGroupIDs = (from Student in db.Students where Student.GroupID == groupID select Student);
+            return StudentGroupIDs.SingleOrDefault();
+        }
+        
+        public Teacher TeacherUsername(string username)
+        {
+            var teacherUsername = (from Teacher in db.Teachers where Teacher.Username == username select Teacher);
+            return teacherUsername.SingleOrDefault();
+        }
+
+        public void AddLesson(int lessonID, int groupID, DateTime dateTime, int teacherID)
+        {
+            Lesson lesson = new Lesson(lessonID, groupID, dateTime, teacherID);
+            db.Lessons.Add(lesson);
+            db.SaveChanges();
+        }
+
+        public void AddGroup(int groupID, string Group, string course)
+        {
+            Group groupadd = new Group(groupID, Group, course);
+            db.Groups.Add(groupadd);
+            db.SaveChanges();
+        }
+
+        public Group CheckGroupID(int groupID)
+        {
+            var checkgroupID = (from Group in db.Groups where Group.GroupID == groupID select Group);
+            return checkgroupID.SingleOrDefault();
+        }
     }
 }

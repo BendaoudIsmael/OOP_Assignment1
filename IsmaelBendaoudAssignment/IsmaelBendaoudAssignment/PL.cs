@@ -27,26 +27,27 @@ namespace IsmaelBendaoudAssignment
             while (showMenu)
             {
                 showMenu = MainMenu();
+                Console.ReadKey();
             }
         }
 
         private static bool MainMenu()
-            {
-                Console.Clear();
-                Console.WriteLine("Main Menu");
-                Console.WriteLine("=========");
-                Console.WriteLine("1. Login");
-                Console.WriteLine("2. Exit");
-                Console.WriteLine("Enter Choice: ");
+        {
+            Console.Clear();
+            Console.WriteLine("Main Menu");
+            Console.WriteLine("=========");
+            Console.WriteLine("1. Login");
+            Console.WriteLine("2. Exit");
+            Console.Write("Enter Choice: ");
 
-                switch (Console.ReadLine())
+            switch (Console.ReadLine())
             {
-                 case "1":
+                case "1":
                     LoginMenu();
                     return true;
 
                 case "2":
-                  //  ExitMessage();
+                    ExitMessage();
                     return false;
 
                 default:
@@ -55,18 +56,107 @@ namespace IsmaelBendaoudAssignment
             }
         }
 
-        private static bool LoginMenu()
+        private static string ExitMessage()
+        {
+            Console.WriteLine("Bye!");
+            return Console.ReadLine();
+        }
+
+
+        private static void LoginMenu()
         {
             Console.WriteLine("Login");
             Console.WriteLine("=======");
-            Console.ReadLine();
-            Console.WriteLine("Username : ");
+            Console.Write("Username : ");
+            string username = Console.ReadLine();
+            Console.WriteLine(bl.TeacherUsername(username));
+            if (bl.TeacherUsername(username).Equals("Welcome"))
+            {
+                Console.WriteLine("Enter your password: ");
+                string password = Console.ReadLine();
+                string result = bl.AddPassword(password, username);
+                if (result == "Welcome")
+                {
+                    TMENU();
+                }
+                else
+                {
+                    Console.WriteLine("Incorrect Password");
+                }
+            }
+        }
 
+        private static void TMENU()
+        {
+            Console.Clear();
+            Console.WriteLine("Choose an option");
+            Console.WriteLine("===============");
+            Console.WriteLine("1) Input Attandance");
+            Console.WriteLine("2) Add New Group");
+            Console.WriteLine("3) Add New Teacher");
+            Console.WriteLine("4) Check student attendance");
+            Console.WriteLine("5) Edit Students");
+            Console.WriteLine("6) Exit");
             switch (Console.ReadLine())
             {
-                default:
-                    return true;
+                case "1":
+                    AddAttendance();
+                    break;
+                case "2":
+                    NewGroup();
+                    break;
+                case "3":
+                    NewTeacher();
+                    break;
             }
+        }
+
+        private static void NewGroup()
+        {
+            int groupID = 0;
+            bool Input = true;
+
+            Console.WriteLine("Enter the Group ID");
+            try
+            {
+                groupID = Int32.Parse(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Input = false;
+            }
+            if (Input == false)
+            {
+                Console.WriteLine("Invalid input");
+            }
+            else
+            {
+                Console.WriteLine("Enter the group name");
+                string name = Console.ReadLine();
+                Console.WriteLine("Enter Course name");
+                string course = Console.ReadLine();
+                Console.WriteLine(bl.CheckGroup(groupID, name, course));
+            }
+        }
+
+        
+        private static void AddAttendance()
+        {
+           
+        }
+
+        private static void NewTeacher()
+        {
+
+        }
+        private static void CheckStudents()
+        {
+
+        }
+
+        private static void EditStudent()
+        {
+
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Data;
+﻿using Domain;
+using Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +17,58 @@ namespace Business
     {
         static DL dl = new DL();
 
+        int teacherID;
+        /*
         public void AddInitialData()
         {
             dl.AddInitialData();
+        }*/
 
+        public string TeacherUsername(string username)
+        {
+            Teacher teacher = dl.TeacherUsername(username);
+            if (teacher == null)
+            {
+                return "The entered ID does not exisit in our system";
+            }
+            else
+            {
+                teacherID = teacher.TeacherID;
+                return "Welcome";
+            }
+        }
 
+        public string AddPassword(string password, string username)
+        {
+            Teacher passteach = dl.TeacherUsername(username);
+            if (passteach.Password == password)
+            {
+                return "Welcome";
+            }
+            else
+            {
+                return "Error";
+            }
+
+        }
+
+        public void CreateNewLesson(int lessonID, int groupID, DateTime dateTime, int teacherID)
+        {
+            dl.AddLesson(lessonID, groupID, dateTime, teacherID);
+        }
+
+        public string CheckGroup(int groupID, string Group, string course)
+        {
+            if (dl.CheckGroupID(groupID) == null)
+            {
+                dl.AddGroup(groupID, Group, course);
+                return "Group Added.";
+            }
+            else
+            {
+                return "ID Already exisit.";
+            }
         }
     }
 }
+

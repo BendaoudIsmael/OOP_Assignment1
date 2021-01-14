@@ -13,3 +13,6 @@ C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Objec
 C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\obj\Debug\Business.csproj.CopyComplete
 C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\obj\Debug\Business.dll
 C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\obj\Debug\Business.pdb
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\Business.dll.config
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ismae\OneDrive - Malta College of Arts, Science & Technology\6.1A\Object Oriented Programming\GitHub\OOP_Assignment1\IsmaelBendaoudAssignment\Business\bin\Debug\EntityFramework.SqlServer.xml

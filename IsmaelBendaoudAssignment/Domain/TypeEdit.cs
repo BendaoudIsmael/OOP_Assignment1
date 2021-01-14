@@ -59,10 +59,10 @@ namespace Domain
 
     public partial class Group
     {
-        public Group(int groupID, string Groupn, string course)
+        public Group(int groupID, string Group, string course)
         {
             GroupID = groupID;
-            name = Groupn;
+            name = Group;
             Course = course;
         }
     }
