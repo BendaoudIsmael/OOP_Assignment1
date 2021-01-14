@@ -50,11 +50,12 @@ namespace Data
             */
 
             
-            
+            /*
             StudentAttendance sa1 = new StudentAttendance(1,1,false,2000);
 
             db.StudentAttendances.Add(sa1);
-            db.SaveChanges();            
+            db.SaveChanges();        
+            */
             
 
         }    

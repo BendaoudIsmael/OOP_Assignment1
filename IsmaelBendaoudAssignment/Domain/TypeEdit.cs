@@ -11,7 +11,7 @@ namespace Domain
     }
     public partial class Teacher
     {
-     
+
         public Teacher(int teacherID, string username, string password, string name, string surname, string email)
         {
             TeacherID = teacherID;
