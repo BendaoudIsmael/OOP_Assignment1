@@ -112,13 +112,20 @@ namespace Data
 
             db.SaveChanges();
         }
-
-
-        public List<StudentAttendance> StudentAttendance(int studentID)
+    
+        /* Had no more time so finalize it sorry
+        public void AddAttandace(int attendanceID, int lessonID, bool presence, int studentID)
         {
-            List<StudentAttendance> studentAttendances = new List<StudentAttendance>(from Student in db.StudentAttendances where Student.StudentID == studentID select Student);
-            return studentAttendances;
+            StudentAttendance addattendance = new StudentAttendance(attendanceID, lessonID, presence, studentID);
+            db.StudentAttendances.Add(addattendance);
+            db.SaveChanges();
         }
 
+        public StudentAttendance CheckStudentAttendance(int attendanceID)
+        {
+            var addattendaceID = (from StudentAttendance in db.StudentAttendances where StudentAttendance.AttendanceID == attendanceID select StudentAttendance);
+            return addattendaceID.SingleOrDefault();
+        }
+        */
     }
 }

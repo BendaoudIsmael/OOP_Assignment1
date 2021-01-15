@@ -235,15 +235,6 @@ namespace IsmaelBendaoudAssignment
             }
         }            
 
-        private static void AddStudentPercentage()
-        {
-
-        }
-        private static void AttendanceOfDay()
-        {
-
-        }
-
         private static void EditStudent()
         {
             int id = 0;
@@ -280,6 +271,31 @@ namespace IsmaelBendaoudAssignment
 
 
         private static void AddAttendance()
+        {
+            int groupID = 0;
+            Console.WriteLine("New Attendance");
+            Console.WriteLine("==============");
+            Console.Write("Group ID: ");
+            try
+            {
+                groupID = Int32.Parse(Console.ReadLine());
+                Console.WriteLine(bl.checkgroupID(groupID));
+            }
+            catch
+            {
+                Console.WriteLine("Invalid Input");
+            }
+            DateTime now = DateTime.Now;
+            Console.WriteLine("Student ID       Student Name        Student Surname     Presence(P/A)");
+            Console.WriteLine("==========       ============        ===============     =============");
+        }
+
+
+        private static void AddStudentPercentage()
+        {
+
+        }
+        private static void AttendanceOfDay()
         {
 
         }

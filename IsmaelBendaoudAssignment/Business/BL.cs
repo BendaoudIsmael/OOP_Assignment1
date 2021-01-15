@@ -8,11 +8,6 @@ using System.Threading.Tasks;
 
 namespace Business
 {
-    /* Business Layer is responsible for the data validations and logical executions. There should be
-     * no input and output and also no direct access to the database (and no queries)
-     * The business ;ayer will be accessed by the presentation layer and the BL should be able to access
-     * the data layer.
-     */
     public class BL
     {
         static DL dl = new DL();
@@ -83,7 +78,6 @@ namespace Business
             }
         }
 
-
         public string CheckStudent(int studentID, string name, string surname, string email, int groupID)
         {
             if (dl.CheckStudentID(studentID) == null)
@@ -134,7 +128,21 @@ namespace Business
                 return "ID does not exist!";
             }
         }
-        
+
+        /*
+        public string CheckAttandance(int attendanceID, int lessonID, bool presence, int studentID)
+        {
+            if (dl.CheckStudentAttendance(attendanceID) == null)
+            {
+                dl.AddAttandace(attendanceID, lessonID, presence, studentID);
+                return "Attendance Added";
+            }
+            else
+            {
+                return "Attendance already exists";
+            }    
+        } 
+        */
     }
 }
 
