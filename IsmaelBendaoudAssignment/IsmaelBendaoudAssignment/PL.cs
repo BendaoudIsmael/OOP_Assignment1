@@ -93,10 +93,12 @@ namespace IsmaelBendaoudAssignment
             Console.WriteLine("===============");
             Console.WriteLine("1) Input Attandance");
             Console.WriteLine("2) Add New Group");
-            Console.WriteLine("3) Add New Teacher");
-            Console.WriteLine("4) Check student attendance");
-            Console.WriteLine("5) Edit Students");
-            Console.WriteLine("6) Exit");
+            Console.WriteLine("3) Add New Student");
+            Console.WriteLine("4) Add New Teacher");
+            Console.WriteLine("5) Check student attendance %");
+            Console.WriteLine("6) Get all attendance of a paritucal day");
+            Console.WriteLine("7) Edit Student");
+            Console.WriteLine("8) Exit");
             switch (Console.ReadLine())
             {
                 case "1":
@@ -106,7 +108,19 @@ namespace IsmaelBendaoudAssignment
                     NewGroup();
                     break;
                 case "3":
+                    NewStudent();
+                    break;
+                case "4":
                     NewTeacher();
+                    break;
+                case "5":
+                    AddStudentPercentage();
+                    break;
+                case "6":
+                    AttendanceOfDay();
+                    break;
+                case "7":
+                    EditStudent();
                     break;
             }
         }
@@ -116,7 +130,7 @@ namespace IsmaelBendaoudAssignment
             int groupID = 0;
             bool Input = true;
 
-            Console.WriteLine("Enter the Group ID");
+            Console.Write("Enter the Group ID: ");
             try
             {
                 groupID = Int32.Parse(Console.ReadLine());
@@ -127,29 +141,62 @@ namespace IsmaelBendaoudAssignment
             }
             if (Input == false)
             {
-                Console.WriteLine("Invalid input");
+                Console.Write("Invalid input");
             }
             else
             {
-                Console.WriteLine("Enter the group name");
+                Console.Write("Enter the group name: ");
                 string name = Console.ReadLine();
-                Console.WriteLine("Enter Course name");
+                Console.Write("Enter Course name: ");
                 string course = Console.ReadLine();
-                Console.WriteLine(bl.CheckGroup(groupID, name, course));
+                Console.Write(bl.CheckGroup(groupID, name, course));
             }
-        }
-
-        
-        private static void AddAttendance()
-        {
-           
         }
 
         private static void NewTeacher()
         {
+            int teacherID = 0;
+            bool Input2 = true;
+            Console.Write("1) Enter Teacher ID");
+            try
+            {
+                teacherID = Int32.Parse(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Input2 = false;
+            }
+            if (Input2 == false)
+            {
+                Console.Write("ID Already Exsist");
+            }
+            else
+            {
+
+                Console.Write("2) Enter Username: ");
+                string username = Console.ReadLine();
+                Console.Write("3) Enter Password: ");
+                string password = Console.ReadLine();
+                Console.Write("4) Enter Name: ");
+                string name = Console.ReadLine();
+                Console.Write("5) Enter Surname: ");
+                string surname = Console.ReadLine();
+                Console.Write("6) Enter Email: ");
+                string email = Console.ReadLine();
+                Console.WriteLine(bl.CheckTeacher(teacherID, username, password, name, surname, email));
+            }
+        }
+
+        private static void NewStudent()
+        {
+            int studentID = 0;
+        }
+
+        private static void AddStudentPercentage()
+        {
 
         }
-        private static void CheckStudents()
+        private static void AttendanceOfDay()
         {
 
         }
@@ -158,5 +205,12 @@ namespace IsmaelBendaoudAssignment
         {
 
         }
+
+
+        private static void AddAttendance()
+        {
+
+        }
+
     }
 }

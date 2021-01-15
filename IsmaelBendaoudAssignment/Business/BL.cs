@@ -66,7 +66,33 @@ namespace Business
             }
             else
             {
-                return "ID Already exisit.";
+                return "ID Already exists.";
+            }
+        }
+
+        public string CheckTeacher(int teacherID, string username, string password, string name, string surname, string email)
+        {
+            if (dl.CheckTeacherID(teacherID) == null)
+            {
+                dl.AddTeacherID(teacherID, username, password, name, surname, email);
+                return "Teacher Added";
+            }
+            else
+            {
+                return "Teacher already exists. ";
+            }
+        }
+
+        public string InsrtStudent(int studentID, string name, string surname, string email, int groupID)
+        {
+            if (dl.CheckStudentID(studentID) == null)
+            {
+                dl.AddStudent(studentID, name, surname, email, groupID);
+                return "New Student Added";
+            }
+            else
+            {
+                return "Student already exists. ";
             }
         }
     }
