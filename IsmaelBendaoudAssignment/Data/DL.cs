@@ -114,7 +114,11 @@ namespace Data
         }
 
 
-        public List<StudentAttendance> studentAttendances = new List<StudentAttendance>(from tudent in db.StudentAttendances where Student.StudentID == studentID select Student);
+        public List<StudentAttendance> StudentAttendance(int studentID)
+        {
+            List<StudentAttendance> studentAttendances = new List<StudentAttendance>(from Student in db.StudentAttendances where Student.StudentID == studentID select Student);
+            return studentAttendances;
+        }
 
     }
 }

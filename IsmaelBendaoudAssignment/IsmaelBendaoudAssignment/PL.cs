@@ -194,6 +194,7 @@ namespace IsmaelBendaoudAssignment
 
             bool Input3 = true;
             Console.Write("1) Enter Student ID: ");
+        
             try
             {
                 studentID = Int32.Parse(Console.ReadLine());
@@ -215,7 +216,22 @@ namespace IsmaelBendaoudAssignment
                 Console.Write("4) Enter Email: ");
                 string email = Console.ReadLine();
                 Console.Write("5) Enter GroupID: ");
-                Console.WriteLine(bl.CheckStudent(studentID,name,surname,email,groupID));
+                try
+                {
+                    groupID = Int32.Parse(Console.ReadLine());
+                    if (bl.checkgroupID(groupID).Equals(""))
+                    {
+                        Console.WriteLine(bl.CheckStudent(studentID, name, surname, email, groupID));
+                    }
+                    else
+                    {
+                        Console.WriteLine(bl.checkgroupID(groupID));
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Invalid Input");
+                }
             }
         }            
 
