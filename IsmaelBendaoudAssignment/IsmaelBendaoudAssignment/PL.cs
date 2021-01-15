@@ -58,7 +58,7 @@ namespace IsmaelBendaoudAssignment
 
         private static string ExitMessage()
         {
-            Console.WriteLine("Bye!");
+            Console.WriteLine("Goodbye!");
             return Console.ReadLine();
         }
 
@@ -72,7 +72,7 @@ namespace IsmaelBendaoudAssignment
             Console.WriteLine(bl.TeacherUsername(username));
             if (bl.TeacherUsername(username).Equals("Welcome"))
             {
-                Console.WriteLine("Enter your password: ");
+                Console.Write("Enter your password: ");
                 string password = Console.ReadLine();
                 string result = bl.AddPassword(password, username);
                 if (result == "Welcome")
@@ -190,7 +190,34 @@ namespace IsmaelBendaoudAssignment
         private static void NewStudent()
         {
             int studentID = 0;
-        }
+            int groupID = 0;
+
+            bool Input3 = true;
+            Console.Write("1) Enter Student ID: ");
+            try
+            {
+                studentID = Int32.Parse(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Input3 = false;
+            }
+            if (Input3 == false)
+            {
+                Console.Write("ID Already Exsist");
+            }
+            else
+            {
+                Console.Write("2) Enter Name: ");
+                string name = Console.ReadLine();
+                Console.Write("3) Enter Surname: ");
+                string surname = Console.ReadLine();
+                Console.Write("4) Enter Email: ");
+                string email = Console.ReadLine();
+                Console.Write("5) Enter GroupID: ");
+                Console.WriteLine(bl.CheckStudent(studentID,name,surname,email,groupID));
+            }
+        }            
 
         private static void AddStudentPercentage()
         {
@@ -203,7 +230,36 @@ namespace IsmaelBendaoudAssignment
 
         private static void EditStudent()
         {
-
+            int id = 0;
+            bool Input4 = true;
+            Console.Write("1) Student ID: ");
+            try
+            {
+                id = Int32.Parse(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Input4 = false;
+            }
+            if (Input4 == false)
+            {
+                Console.WriteLine ("Input Incorrect");
+            }
+            else
+            {
+                Console.WriteLine(bl.checkSID(id));
+                Console.WriteLine("Edit Student");
+                Console.WriteLine("============");
+                Console.WriteLine("New Details: ");
+                Console.WriteLine();
+                Console.Write("Name: ");
+                string newName = Console.ReadLine();
+                Console.Write("Surname: ");
+                string newSurname = Console.ReadLine();
+                Console.Write("Email: ");
+                string newEmail = Console.ReadLine();
+                Console.WriteLine(bl.EditStudentName(id, newName, newSurname, newEmail));
+            }
         }
 
 

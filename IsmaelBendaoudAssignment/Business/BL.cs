@@ -83,18 +83,58 @@ namespace Business
             }
         }
 
-        public string InsrtStudent(int studentID, string name, string surname, string email, int groupID)
+
+        public string CheckStudent(int studentID, string name, string surname, string email, int groupID)
         {
             if (dl.CheckStudentID(studentID) == null)
             {
-                dl.AddStudent(studentID, name, surname, email, groupID);
-                return "New Student Added";
+                dl.AddStudentID(studentID, name, surname, email, groupID);
+                return " Student Added";
             }
             else
             {
                 return "Student already exists. ";
             }
         }
+
+        public string checkgroupID(int groupID)
+        {
+            if (dl.GroupStudentID(groupID) != null)
+            {
+                return "";
+            }
+            else
+            {
+                return "Group ID does not exsist";
+            }
+        }
+
+
+        public string checkSID(int studentID)
+        {
+            if (dl.CheckStudentID(studentID) != null)
+            {
+                return "";
+            }
+            else
+            {
+                return "Student ID does not exsist";
+            }
+        }
+
+        public string EditStudentName(int id, string newName, string newSurname, string newEmail)
+        {
+            if (dl.ExisitingStudentID(id) != null)
+            {
+                dl.EditStudentName(id, newName, newSurname, newEmail);
+                return "Student Added";
+            }
+            else
+            {
+                return "ID does not exist!";
+            }
+        }
+        
     }
 }
 

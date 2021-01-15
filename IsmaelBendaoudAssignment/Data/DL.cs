@@ -15,49 +15,6 @@ namespace Data
 
         AttendanceSystemEntities db = new AttendanceSystemEntities(); //connection to the database
 
-        public void AddInitialData() //to be called once only
-        {
-
-            /*
-            Teacher teach1 = new Teacher(0293600, "Ismael Bendaoud","ismael","Ismael", "Bendaoud", "ism@gmail.com");
-
-            //adding new objects / records to the teahcers DBSet which
-            db.Teachers.Add(teach1);
-            db.SaveChanges();
-            */
-
-            /*
-            Group g1 = new Group(1,"Software","Maths");
-            Group g2 = new Group(2, "Networks", "Hardware");
-
-            db.Groups.Add(g1); db.Groups.Add(g2);
-            db.SaveChanges();
-            */
-
-            /*
-            Student s1 = new Student(1000, "Samuel", "Psaila", "sam@gmail.com", 1);
-            Student s2 = new Student(2000, "Jhon", "West", "jw@gmail.com", 2);
-
-            db.Students.Add(s1); db.Students.Add(s2);
-            db.SaveChanges();
-            */
-
-
-            /*
-            Lesson l1 = new Lesson(1, 2, DateTime.Now, 293600);
-            db.Lessons.Add(l1);
-            db.SaveChanges();
-            */
-
-
-            /*
-            StudentAttendance sa1 = new StudentAttendance(1,1,false,2000);
-
-            db.StudentAttendances.Add(sa1);
-            db.SaveChanges();        
-            */
-        }
-
         public Teacher TeacherIDs(int teacherID)
         {
             var teacherIDs = (from Teacher in db.Teachers where Teacher.TeacherID == teacherID select Teacher);
@@ -121,17 +78,43 @@ namespace Data
             return checkteacherID.SingleOrDefault();
         }
 
-        public void AddStudent(int studentID, string name, string surname, string email, int groupID)
+        public void AddStudentID(int studentID, string name, string surname, string email, int groupID)
         {
-            var addstudentID = new Student(studentID, name, surname, email, groupID);
+            Student addstudentID = new Student(studentID, name, surname, email, groupID);
             db.Students.Add(addstudentID);
             db.SaveChanges();
         }
 
         public Student CheckStudentID(int studentID)
         {
-            var checkstudentID = (from Student in db.Students where Student.StudentID == studentID select Student);
-            return checkstudentID.SingleOrDefault();
+            var addstudentID = (from Student in db.Students where Student.StudentID == studentID select Student);
+            return addstudentID.SingleOrDefault();
         }
+
+        public Student GroupStudentID(int groupID)
+        {
+            var addgroupID = (from Student in db.Students where Student.GroupID == groupID select Student);
+            return addgroupID.SingleOrDefault();
+        }
+
+        public Student ExisitingStudentID(int studentID)
+        {
+            var checkStudID = (from Student in db.Students where Student.StudentID == studentID select Student);
+            return checkStudID.SingleOrDefault();
+        }
+
+        public void EditStudentName(int id, string nametoEdit, string surnametoEdit, string emailtoEdit)
+        {
+            Student stud = db.Students.SingleOrDefault(s => s.StudentID == id);
+            stud.Name = nametoEdit;
+            stud.Surname = surnametoEdit;
+            stud.Email = emailtoEdit;
+
+            db.SaveChanges();
+        }
+
+
+        public List<StudentAttendance> studentAttendances = new List<StudentAttendance>(from tudent in db.StudentAttendances where Student.StudentID == studentID select Student);
+
     }
 }
